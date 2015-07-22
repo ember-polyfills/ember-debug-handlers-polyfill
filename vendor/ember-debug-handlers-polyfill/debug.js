@@ -53,7 +53,7 @@
     var message = _message;
 
     if (options && options.id) {
-      message = message + ` [deprecation id: ${options.id}]`;
+      message = message + ' [deprecation id: ' + options.id + ']';
     }
 
     if (options && options.url) {
