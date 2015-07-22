@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Adds ember-debug-handlers feature to Ember versions prior to 2.1.",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -11,11 +10,14 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwjblue/ember-deprecation-warning-handlers-polyfill.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Robert Jackson <me@rwjblue.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -45,5 +47,10 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/rwjblue/ember-deprecation-warning-handlers-polyfill/issues"
+  },
+  "homepage": "https://github.com/rwjblue/ember-deprecation-warning-handlers-polyfill#readme"
 }
