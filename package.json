@@ -1,7 +1,7 @@
 {
-  "name": "ember-deprecation-warning-handlers-polyfill",
+  "name": "ember-debug-handlers-polyfill",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Adds ember-debug-handlers feature to Ember versions prior to 2.1.",
   "directories": {
     "doc": "doc",
     "test": "tests"

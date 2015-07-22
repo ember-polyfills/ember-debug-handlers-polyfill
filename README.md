@@ -1,4 +1,4 @@
-# ember-deprecation-warning-handlers-polyfill
+# ember-debug-handlers-polyfill
 
 This addon provides an implementation of [emberjs/rfcs#65](https://github.com/emberjs/rfcs/blob/master/text/0065-deprecation-warning-handlers.md) (added to Ember in [emberjs/ember.js#11833](https://github.com/emberjs/ember.js/pull/11833)) that can be used with versions of Ember prior to 2.1.0 (or whenever the `ember-debug-handlers` feature is enabled).
 
