@@ -115,8 +115,11 @@
     invoke('deprecate', message, test, options);
   }
 
-  Ember.deprecate = deprecate;
   Ember.Debug = Ember.Debug || {};
-  Ember.Debug.registerDeprecationHandler = registerDeprecationHandler;
-  Ember.Debug._____HANDLERS__DO__NOT__USE__SERIOUSLY__I_WILL_BE_MAD = HANDLERS;
+
+  if (!Ember.Debug.registerDeprecationHandler) {
+    Ember.deprecate = deprecate;
+    Ember.Debug.registerDeprecationHandler = registerDeprecationHandler;
+    Ember.Debug._____HANDLERS__DO__NOT__USE__SERIOUSLY__I_WILL_BE_MAD = HANDLERS;
+  }
 })(window.Ember);
