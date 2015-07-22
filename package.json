@@ -1,6 +1,6 @@
 {
   "name": "ember-debug-handlers-polyfill",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Adds ember-debug-handlers feature to Ember versions prior to 2.1.",
   "directories": {
     "doc": "doc",
