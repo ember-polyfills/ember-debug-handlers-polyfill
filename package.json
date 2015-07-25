@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rwjblue/ember-deprecation-warning-handlers-polyfill.git"
+    "url": "git+https://github.com/rwjblue/ember-debug-handlers-polyfill.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -50,7 +50,7 @@
   },
   "main": "index.js",
   "bugs": {
-    "url": "https://github.com/rwjblue/ember-deprecation-warning-handlers-polyfill/issues"
+    "url": "https://github.com/rwjblue/ember-debug-handlers-polyfill/issues"
   },
-  "homepage": "https://github.com/rwjblue/ember-deprecation-warning-handlers-polyfill#readme"
+  "homepage": "https://github.com/rwjblue/ember-debug-handlers-polyfill#readme"
 }
