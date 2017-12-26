@@ -11,14 +11,14 @@ module.exports = {
           'ember': 'lts-2-8'
         }
       },
-      npm: {
-        devDependencies: {
-          'ember-source': null
-        }
-      }
     },
     {
       name: 'ember-lts-2.12',
+      bower: {
+        dependencies: {
+          'ember': null
+        }
+      },
       npm: {
         devDependencies: {
           'ember-source': '~2.12.0'
@@ -27,26 +27,34 @@ module.exports = {
     },
     {
       name: "1.13",
-      dependencies: {
-        "ember": "~1.13.0"
+      bower: {
+        dependencies: {
+          "ember": "~1.13.0"
+        }
       }
     },
     {
       name: "1.12",
-      dependencies: {
-        "ember": "~1.12.0"
+      bower: {
+        dependencies: {
+          "ember": "~1.12.0"
+        }
       }
     },
     {
       name: "1.11",
-      dependencies: {
-        "ember": "~1.11.0"
+      bower: {
+        dependencies: {
+          "ember": "~1.11.0"
+        }
       }
     },
     {
       name: "1.10",
-      dependencies: {
-        "ember": "~1.10.0"
+      bower: {
+        dependencies: {
+          "ember": "~1.10.0"
+        }
       }
     },
     {
@@ -59,11 +67,6 @@ module.exports = {
           'ember': 'release'
         }
       },
-      npm: {
-        devDependencies: {
-          'ember-source': null
-        }
-      }
     },
     {
       name: 'ember-beta',
@@ -75,11 +78,6 @@ module.exports = {
           'ember': 'beta'
         }
       },
-      npm: {
-        devDependencies: {
-          'ember-source': null
-        }
-      }
     },
     {
       name: 'ember-canary',
@@ -91,11 +89,6 @@ module.exports = {
           'ember': 'canary'
         }
       },
-      npm: {
-        devDependencies: {
-          'ember-source': null
-        }
-      }
     },
     {
       name: 'ember-default',
