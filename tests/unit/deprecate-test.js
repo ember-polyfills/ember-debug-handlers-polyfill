@@ -1,7 +1,7 @@
 import { deprecate } from '@ember/application/deprecations';
 import { registerDeprecationHandler } from '@ember/debug';
 import Ember from 'ember';
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 
 const HANDLERS = Ember.Debug._____HANDLERS__DO__NOT__USE__SERIOUSLY__I_WILL_BE_MAD;
 
@@ -107,7 +107,7 @@ test('Ember.deprecate does not throw deprecation if second argument is a functio
   assert.ok(true, 'deprecation was not thrown');
 });
 
-test('Ember.deprecate throws if second argument is a function and it returns false', function(assert) {
+skip('Ember.deprecate throws if second argument is a function and it returns false', function(assert) {
   assert.expect(1);
   assert.throws(function() {
     deprecate('Deprecation is thrown', function() {
