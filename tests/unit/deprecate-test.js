@@ -1,5 +1,5 @@
 import { deprecate } from '@ember/application/deprecations';
-import { registerDeprecationHandler, assert } from '@ember/debug';
+import { registerDeprecationHandler } from '@ember/debug';
 import Ember from 'ember';
 import { module, test } from 'qunit';
 
