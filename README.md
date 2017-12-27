@@ -9,8 +9,8 @@ This polyfill will be useful for other tooling related addons or app developers 
 ### Installation
 
 * `git clone <repository-url>` this repository
-* `cd my-addon`
-* `npm install`
+* `cd ember-debug-handlers-polyfill`
+* `yarn install`
 
 ### Running
 
@@ -19,7 +19,7 @@ This polyfill will be useful for other tooling related addons or app developers 
 
 ### Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
