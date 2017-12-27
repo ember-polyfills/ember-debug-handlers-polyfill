@@ -9,14 +9,14 @@ let originalEnvValue;
 let originalDeprecateHandler;
 
 module('ember-debug', {
-  setup() {
+  beforeEach() {
     originalEnvValue = Ember.ENV.RAISE_ON_DEPRECATION;
     originalDeprecateHandler = HANDLERS.deprecate;
 
     Ember.ENV.RAISE_ON_DEPRECATION = true;
   },
 
-  teardown() {
+  afterEach() {
     HANDLERS.deprecate = originalDeprecateHandler;
 
     Ember.ENV.RAISE_ON_DEPRECATION = originalEnvValue;
