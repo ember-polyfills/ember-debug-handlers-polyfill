@@ -1,9 +1,9 @@
 import { warn } from '@ember/debug';
 import { registerWarnHandler } from '@ember/debug';
-import Ember from 'ember';
 import { module, test } from 'qunit';
+import getHandlers from '../helpers/get-handlers';
 
-const HANDLERS = Ember.Debug._____HANDLERS__DO__NOT__USE__SERIOUSLY__I_WILL_BE_MAD;
+const HANDLERS = getHandlers();
 
 let originalWarnHandler;
 
