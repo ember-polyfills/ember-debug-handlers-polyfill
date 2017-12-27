@@ -2,21 +2,22 @@ import { deprecate } from '@ember/application/deprecations';
 import { registerDeprecationHandler } from '@ember/debug';
 import Ember from 'ember';
 import { module, test, skip } from 'qunit';
+import getHandlers from '../helpers/get-handlers';
 
-const HANDLERS = Ember.Debug._____HANDLERS__DO__NOT__USE__SERIOUSLY__I_WILL_BE_MAD;
+const HANDLERS = getHandlers();
 
 let originalEnvValue;
 let originalDeprecateHandler;
 
 module('ember-debug', {
-  setup() {
+  beforeEach() {
     originalEnvValue = Ember.ENV.RAISE_ON_DEPRECATION;
     originalDeprecateHandler = HANDLERS.deprecate;
 
     Ember.ENV.RAISE_ON_DEPRECATION = true;
   },
 
-  teardown() {
+  afterEach() {
     HANDLERS.deprecate = originalDeprecateHandler;
 
     Ember.ENV.RAISE_ON_DEPRECATION = originalEnvValue;
