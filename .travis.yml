@@ -12,8 +12,7 @@ addons:
   chrome: stable
 
 cache:
-  directories:
-    - $HOME/.npm
+  yarn: true
 
 env:
   global:
@@ -36,15 +35,15 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
-    - bower_components
+    - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
-  - npm config set spin false
-  - npm install -g npm@4 bower
-  - npm --version
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+  - yarn global add bower
 
 install:
-  - npm install
+  - yarn install --no-lockfile --non-interactive
   - bower install
 
 script:
