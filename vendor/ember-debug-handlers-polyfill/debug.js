@@ -39,7 +39,7 @@
 
 
   /**
-   Replacement Ember.deprecate handlers
+   Replacement Ember.deprecate and Ember.warn handlers
    */
 
   var EmberError = Ember.Error;
@@ -47,6 +47,10 @@
 
   function registerDeprecationHandler(handler) {
     registerHandler('deprecate', handler);
+  }
+
+  function registerWarnHandler(handler) {
+    registerHandler('warn', handler);
   }
 
   function formatMessage(_message, options) {
@@ -67,6 +71,13 @@
     var updatedMessage = formatMessage(message, options);
 
     Logger.warn('DEPRECATION: ' + updatedMessage);
+  });
+
+  registerWarnHandler(function logDeprecationToConsole(message) {
+    Logger.warn('WARNING: ' + message);
+    if ('trace' in Logger) {
+      Logger.trace();
+    }
   });
 
   registerDeprecationHandler(function logDeprecationStackTrace(message, options, next) {
@@ -115,11 +126,17 @@
     invoke('deprecate', message, test, options);
   }
 
+  function warn(message, test, options) {
+    invoke('warn', message, test, options);
+  }
+
   Ember.Debug = Ember.Debug || {};
 
   if (!Ember.Debug.registerDeprecationHandler) {
     Ember.deprecate = deprecate;
+    Ember.warn = warn;
     Ember.Debug.registerDeprecationHandler = registerDeprecationHandler;
+    Ember.Debug.registerWarnHandler = registerWarnHandler;
     Ember.Debug._____HANDLERS__DO__NOT__USE__SERIOUSLY__I_WILL_BE_MAD = HANDLERS;
   }
 })(window.Ember);
